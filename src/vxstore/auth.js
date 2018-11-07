@@ -8,7 +8,7 @@ const state = {
 };
 
 const mutations = {
-  setUser(state, user){
+  setUser(state, user) {
     state.user = user;
     state.isLoggedIn = true;
   },
@@ -17,19 +17,19 @@ const mutations = {
 const actions = {
   async login({ commit }) {
     const provider = new firebase.auth.GoogleAuthProvider();
-    const {user} = await firebase.auth().signInWithPopup(provider);
+    const { user } = await firebase.auth().signInWithPopup(provider);
     //  this is object we write to db
     //  get these from the console log - we want to save this to DB
 
-    const setUser={
+    const setUser = {
       id: user.uid,
       name: user.displayName,
       image: user.photoURL,
       created_at: firebase.firestore.FieldValue.serverTimestamp(),
-    }
-    //so we can query by id
+    };
+    // so we can query by id
     db.collection('users').doc(setUser.id).set(setUser);
-    commit('setUser',);
+    commit('setUser');
   },
 };
 
