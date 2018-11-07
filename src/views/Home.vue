@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <a class="button is-danger" @click="login()">Login with Google</a>
-    <a class="button is-danger" @click="logout()">Logout with Google</a>
   </div>
 </template>
 
