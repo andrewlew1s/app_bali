@@ -10,7 +10,7 @@ firebase.auth().onAuthStateChanged((user) => {
       user = user.user;
     }
     //  this is object we write to db
-    //  get these from the console log - we want to save this to DB
+    //  I got these from the console log - we want to save this to DB
     const setUser = {
       id: user.uid,
       name: user.displayName,
