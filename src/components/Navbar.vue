@@ -12,7 +12,7 @@
             <span></span>
         </div>
       </div>
-      <div class="navbar-menu" v-bind:class="{ 'is-active' : showNav }">
+      <div class="navbar-menu">
           <div class="navbar-start">
               <a class="navbar-item">
                   <span><i class="mdi mdi-24px mdi-library-books"></i>Locations</span>
@@ -34,7 +34,7 @@
               </div>
           </div>
           <div class="navbar-end">
-            <a class="button is Danger" @click="login()">
+            <a class="button is-danger" @click="login()">
                     Login with Google
             </a>
             <a class="button is-primary" @click="logout()">
@@ -53,18 +53,13 @@ import { mapActions, mapState } from 'vuex';
 export default {
   computed: mapState('auth', ['user', 'isLoggedIn']),
   methods: mapActions('auth', ['login', 'logout']),
-  toggleShadow() {
-  // if page is scrolled
-    if (window.scrollY !== 0) {
-      this.$el.classList.add('Header--shadow');
-    } else {
-      this.$el.classList.remove('Header--shadow');
-    }
-  },
-  mounted() {
-    window.addEventListener('scroll', this.toggleShadow);
-  },
-
 };
-
 </script>
+
+<style lang="scss">
+.button{
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+};
+</style>
