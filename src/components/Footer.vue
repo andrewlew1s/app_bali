@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer class="footer">
+    <footer class="footer is-info">
       <div class="content has-text-centered">
         <p>
           <strong>Bali Guide</strong> by <a href="https://www.facebook.com/andrew.lewis.9803">Andrew Lewis</a>.
@@ -23,6 +23,5 @@ export default {
 .footer{
   width: 100%;
   height: 275px;
-  background-color: rgba(247, 231, 231, 0.678);
 }
 </style>

@@ -34,12 +34,16 @@
               </div>
           </div>
           <div class="navbar-end">
-            <a class="button is-danger" @click="login()">
-                    Login with Google
-            </a>
-            <a class="button is-primary" @click="logout()">
-                    Logout
-            </a>
+            <p class="control" v-if="!isLoggedIn">
+              <a class="button is-danger" @click="login()">
+                      Login with Google
+              </a>
+            </p>
+            <p class="control" v-if="isLoggedIn">
+              <a class="button is-primary" @click="logout()">
+                      Logout
+              </a>
+            </p>
           </div>
       </div>
     </nav>
