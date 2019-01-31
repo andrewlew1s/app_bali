@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <a class="button is-danger" @click="login()">Login with Google</a>
   </div>
 </template>
 
@@ -9,6 +8,6 @@ import { mapActions } from 'vuex';
 
 export default {
   name: 'home',
-  methods: mapActions('auth', ['login']),
+  methods: mapActions('auth', ['login', 'logout']),
 };
 </script>
