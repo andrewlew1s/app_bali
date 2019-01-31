@@ -18,20 +18,8 @@
                   <span><i class="mdi mdi-24px mdi-library-books"></i>Locations</span>
               </a>
               <a class="navbar-item">
-                  <span><i class="mdi mdi-24px mdi-comment-text-outline"></i>Hotels</span>
-              </a>
-              <a class="navbar-item">
                   <span><i class="mdi mdi-24px mdi-account-multiple"></i> People</span>
               </a>
-              <div class="navbar-item has-dropdown is-hoverable"
-               @click="showSubMenu()">
-                  <a class="navbar-link"><span><i class="mdi mdi-24px mdi-view-list">
-                    </i> Restaurants</span></a>
-                  <div class="navbar-dropdown is-hidden-touch">
-                      <a class="navbar-item" href="">
-                        <span><i class="mdi mdi-24px mdi-star"></i> Favorites</span></a>
-                  </div>
-              </div>
           </div>
           <div class="navbar-end">
             <p class="control" v-if="!isLoggedIn">
